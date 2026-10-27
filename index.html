@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Pedidos - Cafetería Escolar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>☕ Cafetería Escolar</h1>
+        <p>Sistema de registro y control de pedidos</p>
+    </header>
+
+    <main>
+        <section class="card">
+            <h2>📝 Registrar pedido</h2>
+
+            <form id="formPedido">
+                <label for="cliente">Nombre del cliente:</label>
+                <input type="text" id="cliente" placeholder="Escribe el nombre" required>
+
+                <label for="producto">Seleccionar producto:</label>
+                <select id="producto" required>
+                    <option value="P001">Pupusa - $0.75</option>
+                    <option value="P002">Hamburguesa - $2.50</option>
+                    <option value="P003">Pizza - $2.00</option>
+                    <option value="P004">Taco - $1.50</option>
+                    <option value="P005">Jugo - $1.00</option>
+                    <option value="P006">Agua - $0.75</option>
+                </select>
+
+                <label for="cantidad">Cantidad:</label>
+                <input type="number" id="cantidad" min="1" value="1" required>
+
+                <label for="pago">Método de pago:</label>
+                <select id="pago" required>
+                    <option value="Efectivo">Efectivo</option>
+                    <option value="Tarjeta">Tarjeta</option>
+                </select>
+
+                <div class="calculadora">
+                    <p>Precio: <strong id="precio">$0.75</strong></p>
+                    <p>Subtotal: <strong id="subtotal">$0.75</strong></p>
+                    <p>Descuento: <strong id="descuento">$0.00</strong></p>
+                    <p class="total">TOTAL: <span id="total">$0.75</span></p>
+                </div>
+
+                <button type="submit">REALIZAR PEDIDO</button>
+            </form>
+
+            <div id="mensaje"></div>
+        </section>
+
+        <section class="card">
+            <h2>📋 Pedido registrado</h2>
+            <div id="detallePedido">
+                <p>Aquí aparecerán los detalles del pedido.</p>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>📂 Consultar pedidos TXT</h2>
+            <p class="ayuda">
+                Selecciona el archivo pedidos.txt para cargar los registros guardados.
+            </p>
+
+            <input type="file" id="archivoTXT" accept=".txt">
+
+            <button type="button" id="btnCargar">
+                CARGAR PEDIDOS.TXT
+            </button>
+
+            <div class="tabla-contenedor">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Código</th>
+                            <th>Cliente</th>
+                            <th>Producto</th>
+                            <th>Cantidad</th>
+                            <th>Total</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tablaPedidos">
+                        <tr>
+                            <td colspan="5">No hay pedidos cargados.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="card resumen">
+            <h2>💰 Resumen de ventas</h2>
+            <p>Pedidos registrados: <strong id="numeroPedidos">0</strong></p>
+            <p>Total de ventas: <strong id="ventas">$0.00</strong></p>
+        </section>
+
+        <section class="card">
+            <h2>💾 Guardar archivo TXT</h2>
+            <p class="ayuda">
+                Descarga todos los pedidos registrados en formato de texto.
+            </p>
+            <button type="button" id="btnGuardar">
+                DESCARGAR PEDIDOS.TXT
+            </button>
+        </section>
+    </main>
+
+    <footer>
+        <p>Proyecto 3 | Cafetería Escolar</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

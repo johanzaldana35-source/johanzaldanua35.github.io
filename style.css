@@ -1,0 +1,227 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7ef;
+    color: #30443a;
+    line-height: 1.6;
+}
+
+header {
+    background: linear-gradient(135deg, #28594b, #54a68a, #8dcdb0);
+    color: white;
+    text-align: center;
+    padding: 35px 15px;
+}
+
+header h1 {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+main {
+    width: 92%;
+    max-width: 950px;
+    margin: 25px auto;
+}
+
+.card {
+    background: #ffffff;
+    padding: 25px;
+    margin-bottom: 22px;
+    border-radius: 16px;
+    border: 1px solid #e0eadf;
+    box-shadow: 0 5px 16px rgba(42, 91, 72, 0.09);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 9px 22px rgba(42, 91, 72, 0.14);
+}
+
+h2 {
+    color: #28745b;
+    margin-bottom: 18px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-top: 14px;
+    margin-bottom: 6px;
+    color: #355b4b;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #c9dbce;
+    border-radius: 9px;
+    font-size: 15px;
+    background: #fcfdf9;
+    color: #30443a;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: #40a681;
+    box-shadow: 0 0 0 3px rgba(64, 166, 129, 0.16);
+}
+
+button {
+    width: 100%;
+    padding: 13px;
+    margin-top: 15px;
+    background: linear-gradient(135deg, #319b78, #24765e);
+    color: white;
+    border: none;
+    border-radius: 9px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 15px;
+    transition: background 0.25s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #24765e, #195b49);
+    transform: translateY(-2px);
+}
+
+.calculadora {
+    margin-top: 20px;
+    padding: 16px;
+    background: #fff5e8;
+    border-radius: 12px;
+    border: 1px solid #f2d6ad;
+}
+
+.calculadora p {
+    margin: 6px 0;
+}
+
+.total {
+    color: #25805c;
+    font-size: 22px;
+    font-weight: bold;
+    border-top: 1px solid #e8d1ad;
+    padding-top: 10px;
+    margin-top: 10px !important;
+}
+
+#mensaje {
+    margin-top: 12px;
+    font-weight: bold;
+}
+
+.exito {
+    color: #218052;
+}
+
+.error {
+    color: #d44848;
+}
+
+#detallePedido {
+    background: #f0f8f3;
+    padding: 16px;
+    border-radius: 10px;
+    border-left: 5px solid #43a77e;
+}
+
+#detallePedido p {
+    margin: 7px 0;
+}
+
+.ayuda {
+    color: #73867b;
+    margin-bottom: 12px;
+}
+
+.tabla-contenedor {
+    overflow-x: auto;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 500px;
+    background: white;
+}
+
+th,
+td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #e0e9e1;
+}
+
+th {
+    background: #347c62;
+    color: white;
+}
+
+tbody tr:nth-child(even) {
+    background: #f0f7f1;
+}
+
+tbody tr:hover {
+    background: #e2f2e7;
+}
+
+.resumen {
+    background: linear-gradient(135deg, #e8f7ed, #f4fbf2);
+    border-left: 6px solid #35a879;
+}
+
+.resumen h2 {
+    color: #24764f;
+}
+
+.resumen p {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.resumen strong {
+    color: #218052;
+}
+
+footer {
+    text-align: center;
+    background: linear-gradient(135deg, #244b3e, #356b55);
+    color: white;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+@media (max-width: 600px) {
+    header {
+        padding: 28px 15px;
+    }
+
+    header h1 {
+        font-size: 25px;
+    }
+
+    .card {
+        padding: 17px;
+    }
+
+    main {
+        width: 95%;
+    }
+
+    .resumen p {
+        font-size: 16px;
+    }
+}
